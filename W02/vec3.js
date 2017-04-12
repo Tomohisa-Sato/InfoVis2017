@@ -36,3 +36,40 @@ Vec3.prototype.min() = function()
 	return this.z;
     }
 }
+
+Vec3.prototype.mid() = function()
+{
+    if(((this.z <= this.x) && (this.x <= this.y))||((this.y <= this.x) && (this.x <= this.z)))
+    {
+	return this.x;
+    }
+
+    if(((this.z <= this.y) && (this.y <= this.x))||((this.x <= this.y) && (this.y <= this.z)))
+    {
+	return this.y;
+    }
+
+    if(((this.x <= this.z) && (this.z <= this.y))||((this.y <= this.z) && (this.z <= this.x)))
+    {
+	return this.z;
+    }
+}
+
+
+Vec3.prototype.max() = function()
+{
+    if((this.x >= this.y) && (this.x >= this.z))
+    {
+	return this.x;
+    }
+
+    if((this.y >= this.x) && (this.y >= this.z))
+    {
+	return this.y;
+    }
+
+    if((this.z >= this.x) && (this.z >= this.y))
+    {
+	return this.z;
+    }
+}
