@@ -19,7 +19,7 @@ Vec3.prototype.sum = function()
     return this.x + this.y + this.z;
 }
 
-Vec3.prototype.min() = function()
+Vec3.prototype.min = function()
 {
     if((this.x <= this.y) && (this.x <= this.z))
     {
@@ -37,7 +37,7 @@ Vec3.prototype.min() = function()
     }
 }
 
-Vec3.prototype.mid() = function()
+Vec3.prototype.mid = function()
 {
     if(((this.z <= this.x) && (this.x <= this.y))||((this.y <= this.x) && (this.x <= this.z)))
     {
@@ -56,7 +56,7 @@ Vec3.prototype.mid() = function()
 }
 
 
-Vec3.prototype.max() = function()
+Vec3.prototype.max = function()
 {
     if((this.x >= this.y) && (this.x >= this.z))
     {
