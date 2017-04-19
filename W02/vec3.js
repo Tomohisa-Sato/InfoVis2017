@@ -73,3 +73,10 @@ Vec3.prototype.max = function()
 	return this.z;
     }
 }
+
+function Area(v0,v1,v2){
+    var v10 = new Vec3(v0.x-v1.x,v0.y-v1.y,v0.z-v1.z);
+    var v12 = new Vec3(v2.x-v1.x,v2.y-v1.y,v2.z-v1.z);
+    var cross =  new Vec3(v10.y*v12.z - v10.z *v12.y,v10.z*v12.x-v10.x*v12.z,v10.x*v12.y-v10.y*v12.x);
+    return 0.5*(Math.sqrt(cross.x*cross.x+cross.y*cross.y+cross.z*cross.x));
+}
